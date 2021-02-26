@@ -1,0 +1,32 @@
+sensor:
+  - platform: ultrasonic
+    id: parking_sensor
+    internal: true
+    trigger_pin: D2
+    echo_pin: D1
+    update_interval: 250ms
+    pulse_time: 10us
+    on_value:
+      - lambda: id(parking_slowflash).publish_state(x < 2.1);
+      - lambda: id(parking_fastflash).publish_state(x < 1.2);
+      - lambda: id(parking_stop).publish_state(x < 0.5);
+
+binary_sensor:
+  - platform: template
+    device_class: motion
+    id: parking_slowflash
+    name: Parking Slowflash
+    filters:
+      - delayed_off: 250ms
+  - platform: template
+    device_class: motion
+    id: parking_fastflash
+    name: Parking Fastflash
+    filters:
+      - delayed_off: 250ms
+  - platform: template
+    device_class: motion
+    id: parking_stop
+    name: Parking Stop
+    filters:
+      - delayed_off: 250ms
