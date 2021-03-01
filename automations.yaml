@@ -1,0 +1,56 @@
+- id: '1614188816911'
+  alias: Park The Car - Slow Flash
+  description: under 240cm distance
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.parking_slowflash
+    from: CLEAR
+    to: DETECTED
+  condition:
+  - condition: device
+    device_id: c05aa39100eb536b410f132e388b88a6
+    domain: cover
+    entity_id: cover.garage_door_opener
+    type: is_open
+  action:
+  - service: script.slow_flashing_light
+    data: {}
+  mode: single
+- id: '1614353220058'
+  alias: Park The Car - Fast Flash
+  description: under 160cm distance
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.parking_fastflash
+    from: CLEAR
+    to: DETECTED
+  condition:
+  - condition: device
+    device_id: c05aa39100eb536b410f132e388b88a6
+    domain: cover
+    entity_id: cover.garage_door_opener
+    type: is_open
+  action:
+  - service: script.fast_flashing_light
+    data: {}
+  mode: single
+- id: '1614353470073'
+  alias: Park The Car - Parked
+  description: Steady on light
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.parking_stop
+    from: CLEAR
+    to: DETECTED
+  condition:
+  - condition: device
+    device_id: c05aa39100eb536b410f132e388b88a6
+    domain: cover
+    entity_id: cover.garage_door_opener
+    type: is_open
+  action:
+  - type: turn_on
+    device_id: 00e7c2428477b48ee991c2208b166428
+    entity_id: switch.parking_light_indicator
+    domain: switch
+  mode: single
