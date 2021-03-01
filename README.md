@@ -1,5 +1,5 @@
 # ultrasonic-garage-park-assist
-Use a HC-SR04 Ultrasonic Sensor to help know when to stop the car when pulling into the garage
+Use a HC-SR04 Ultrasonic Sensor to help know when to stop the car when pulling into the garage. I'm using a NodeMCU, but this should work with any ESP8266 type board. I'm also using ESPHome on the 8266 Controller.
 
 My goal was to make it easy for the wife to pull in the garage and know when to stop so the back of her car would clear the garage door. I used to use a short 2x4 laying on the floor, but it would end up being kicked around and end up in the wrong location. I thought about the tennis ball on a string, but who wants to keep ducking around a tennis ball when walking around their garage.
 
