@@ -14,6 +14,6 @@ There are 3 indicators that will show up in the Home Assistant Dashboard. You co
   2. Parking Fastflash
   3. Parking Stop
 
-With Home Assistant, I can set a script for the different two different speeds flasing the overhead light, and an automation so this device is only active when the door is open.
+With Home Assistant, I set a script for the different two different speeds flasing the overhead light, and an automation so this device is only active when the door is open.
 
 More info to follow.
