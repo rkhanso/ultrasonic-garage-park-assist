@@ -7,9 +7,9 @@ sensor:
     update_interval: 250ms
     pulse_time: 10us
     on_value:
-      - lambda: id(parking_slowflash).publish_state(x < 2.1);
-      - lambda: id(parking_fastflash).publish_state(x < 1.2);
-      - lambda: id(parking_stop).publish_state(x < 0.5);
+      - lambda: id(parking_slowflash).publish_state(x < 2.4);
+      - lambda: id(parking_fastflash).publish_state(x < 1.6);
+      - lambda: id(parking_stop).publish_state(x < 0.8);
 
 binary_sensor:
   - platform: template
