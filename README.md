@@ -9,7 +9,7 @@ There are 3 "zones" set up. You can see these in the parking_assist.yaml file in
   2. under 1.6 meters
   3. under .8 meter
 
-There are 3 indicators that will show up in the Home Assistant Dashboard. You could have these NOT visible in the dashboard simply hiding them in the dashboard.
+There are 3 indicators that will show up in the Home Assistant Dashboard. You could have these NOT visible in the dashboard simply hiding them in the dashboard. I am using these scripts to flash the overhead ceiling light so the wife knows when to stop pulling in and park her car. This is set up in a script in Home Assistant
   1. Parking Slowflash
   2. Parking Fastflash
   3. Parking Stop
