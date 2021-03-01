@@ -4,10 +4,10 @@ Use a HC-SR04 Ultrasonic Sensor to help know when to stop the car when pulling i
 My goal was to make it easy for the wife to pull in the garage and know when to stop so the back of her car would clear the garage door. I used to use a short 2x4 laying on the floor, but it would end up being kicked around and end up in the wrong location. I thought about the tennis ball on a string, but who wants to keep ducking around a tennis ball when walking around their garage.
 
 The Sensor is mounted under a shelf at the far-end wall (from the large garage door). 
-There are 3 "zones" set up. 
-  1. under 2.1 meters
-  2. under 1.2 meters
-  3. under .5 meter
+There are 3 "zones" set up. You can see these in the parking_assist.yaml file in the on_value: section. You'll want to change those numbers to suit your situation.
+  1. under 2.4 meters
+  2. under 1.6 meters
+  3. under .8 meter
 
 There are 3 indicators that will show up in the Home Assistant Dashboard. You could have these NOT visible in the dashboard simply hiding them in the dashboard.
   1. Parking Slowflash
