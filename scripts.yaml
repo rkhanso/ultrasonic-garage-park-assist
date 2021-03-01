@@ -1,0 +1,50 @@
+fast_flashing_light:
+  mode: single
+  alias: Fast Flashing light
+  sequence:
+  - repeat:
+      count: '40'
+      sequence:
+      - type: turn_on
+        device_id: 00e7c2428477b48ee991c2208b166428
+        entity_id: switch.parking_light_indicator
+        domain: switch
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 0
+          milliseconds: 200
+      - type: turn_off
+        device_id: 00e7c2428477b48ee991c2208b166428
+        entity_id: switch.parking_light_indicator
+        domain: switch
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 0
+          milliseconds: 200
+slow_flashing_light:
+  mode: single
+  alias: Slow Flashing light
+  sequence:
+  - repeat:
+      count: '20'
+      sequence:
+      - type: turn_on
+        device_id: 00e7c2428477b48ee991c2208b166428
+        entity_id: switch.parking_light_indicator
+        domain: switch
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 0
+          milliseconds: 650
+      - type: turn_off
+        device_id: 00e7c2428477b48ee991c2208b166428
+        entity_id: switch.parking_light_indicator
+        domain: switch
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 0
+          milliseconds: 650
